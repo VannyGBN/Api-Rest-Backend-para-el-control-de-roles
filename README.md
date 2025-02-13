@@ -61,7 +61,7 @@ Se presenta con el CRUD solicitado como parte del examen en el se puede:
 
 **Nota:**  
 - Debes tener creada la Base de datos, si aún no la tienes puedes hacerlo de la siguiente forma: ``create database roles_db;``  
-- O Puedes **descargar** el script de la base de datos e **importarla en MySQL** WorkBench o similar
+- Debes **descargar** el script de la base de datos e **importarla en MySQL** WorkBench
 - Puedes descargar la carpeta completa y abrirla en un entorno directamente sin necesidad de clonar repositorio.  
 
 

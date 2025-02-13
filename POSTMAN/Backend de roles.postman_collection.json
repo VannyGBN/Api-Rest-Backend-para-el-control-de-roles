@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "73ccfa26-e13a-498b-a36d-371f60d25fd8",
+		"name": "Backend de roles",
+		"description": "Prueba mediante el consumo de url´s del ejercicio propuesto \"Backend de roles\".",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39398780"
+	},
+	"item": [
+		{
+			"name": "Extra: CRUD para permisos",
+			"item": [
+				{
+					"name": "Crear Permisos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombrePermiso\": \"solicita prestamo\",\r\n    \"descripcion\": \"Permite pedir un prestamo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/permiso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"permiso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista todos los permisos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/permiso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"permiso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Permiso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/permiso/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"permiso",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Permiso por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/permiso/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"permiso",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Extra al ejercicio solicitado, se creo un CRUD basico para el manejo de los permisos, y poder crear una lista de la cual se podrán seleccionar para cada rol"
+		},
+		{
+			"name": "Ejer: CRUD solicitado para roles",
+			"item": [
+				{
+					"name": "Crear Rol",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRol\": \"Cliente\",\r\n    \"imagenRol\": \"https://ejemplo.com/genrente.jpg\",\r\n    \"estatusRol\": \"activo\",\r\n    \"permisoIds\": [19, 20, 21]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos los roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar rol por nombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/rol/search?nombre=Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								"search"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Cliente"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Colsultar entre rango de fechas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/rol/search?fechaInicio=2025-02-12T00:00:00&fechaFin=2025-02-12T03:59:59",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								"search"
+							],
+							"query": [
+								{
+									"key": "fechaInicio",
+									"value": "2025-02-12T00:00:00"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2025-02-12T03:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Rol",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRol\": \"Cajero\",\r\n    \"imagenRol\": \"https://ejemplo.com/cajero-principal.jpg\",\r\n    \"estatusRol\": true,\r\n    \"permisoIds\": [9, 10, 13, 16]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/rol/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar rol",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/rol/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validacion evitar doble rol",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreRol\": \"Cliente\",\r\n    \"imagenRol\": \"https://ejemplo.com/genrente.jpg\",\r\n    \"estatusRol\": \"activo\",\r\n    \"permisoIds\": [19, 20, 21]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/rol",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rol"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Se presenta con el CRUD solicitado como parte del examen en el se puede:\n\n- Dar de alta un rol, con nombre, imagen (URL), estatus, fecha (generada en auto.) + una lista de permisos que tiene el rol.\n    \n- Buscar los roles por Id.\n    \n- Buscar roles por nombre.\n    \n- Buscar roles entre fechas de registro.\n    \n- Validaciones para evitar que repita un rol.\n    \n- Actualizar un rol.\n    \n- Eliminar un rol ( y su relacion con sus permisos establecidos)."
+		}
+	]
+}
