@@ -84,7 +84,7 @@ Se presenta con el CRUD solicitado como parte del examen en el se puede:
 
 
 
-##Notas:##
+## Notas: ##
 - En el archivo de pruebas POSTMAN, se presentan los Json que permiten hacer uso de las peticiones
 
 
