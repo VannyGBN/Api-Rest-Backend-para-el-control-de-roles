@@ -61,7 +61,7 @@ Se presenta con el CRUD solicitado como parte del examen en el se puede:
 
 **Nota:**  
 - Debes tener creada la Base de datos, si aún no la tienes puedes hacerlo de la siguiente forma: ``create database roles_db;``  
-- Debes **descargar** el script de la base de datos e **importarla en MySQL** WorkBench
+- Debes **descargar** el script de la base de datos e **importarla en MySQL** WorkBench (Si deseas utilizar los datos para pruebas)
 - Puedes descargar la carpeta completa y abrirla en un entorno directamente sin necesidad de clonar repositorio.  
 
 
@@ -84,7 +84,7 @@ Se presenta con el CRUD solicitado como parte del examen en el se puede:
 
 
 
-## Notas: ##
+## Notas:  
 - En el archivo de pruebas POSTMAN, se presentan los Json que permiten hacer uso de las peticiones
 
 
